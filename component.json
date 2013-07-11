@@ -1,0 +1,16 @@
+{
+  "name": "ejs",
+  "repo": "visionmedia/ejs",
+  "description": "Embedded JavaScript templates",
+  "version": "0.8.4",
+  "author": "TJ Holowaychuk <tj@vision-media.ca>",
+  "keywords": ["template", "engine", "ejs"],
+  "development": {
+    "chaijs/chai": "*",
+    "component/path": "*",
+    "matthewp/fs": "*"
+  },
+  "main": "index.js",
+  "scripts": ["index.js", "lib/ejs.js", "lib/filters.js", "lib/utils.js"],
+  "license": "MIT"
+}

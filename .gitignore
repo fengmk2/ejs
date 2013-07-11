@@ -2,3 +2,6 @@
 *.sw[a-z]
 vim/.netrwhist
 node_modules
+components
+build
+test/ejs_browser.js

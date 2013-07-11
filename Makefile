@@ -4,9 +4,19 @@ UGLIFY_FLAGS = --no-mangle
 
 all: ejs.min.js
 
+build: components index.js $(SRC)
+	@component build --dev
+
+components: component.json
+	@component install --dev -v
+
+test-browser: build
+	@node support/build_fixtures.js
+	@mocha-phantomjs test/test.html
+
 test:
 	@./node_modules/.bin/mocha \
-		--reporter spec
+		--reporter spec test/ejs.js
 
 ejs.js: $(SRC)
 	@node support/compile.js $^

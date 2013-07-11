@@ -18,6 +18,8 @@ test:
 	@./node_modules/.bin/mocha \
 		--reporter spec test/ejs.js
 
+test-all: test test-browser
+
 ejs.js: $(SRC)
 	@node support/compile.js $^
 
